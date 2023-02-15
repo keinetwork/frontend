@@ -10,7 +10,7 @@ module.exports = {
     // 경로 별칭
     alias: {
       '~': path.resolve(__dirname, 'src'),
-      'assetts': path.resolve(__dirname, 'src/assets')
+      'assets': path.resolve(__dirname, 'src/assets')
     }
   },
   // 파일을 읽어들이기 시작하는 진입점 설정
