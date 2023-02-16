@@ -1,28 +1,27 @@
 <template>
-  <!-- Remove & use example component! -->
-  <HelloWorld 
-    :msg="message" 
-    @click="handler" />
-  <HelloWorld msg="Good" />
+  <h1 @click="increase">
+    {{ count }}
+  </h1> 
 </template>
 
 <script>
-import HelloWorld from '~/components/HelloWorld'
-
 export default {
-  components: {
-    HelloWorld
-  },
   data() {
     return {
-      message: 'Hello Vue!'
+      count: 0
     }
   },
   methods: {
-    handler() {
-      console.log(this.message)
-      this.message += '!'
+    increase() {
+      this.count += 1
     }
   }
 }
 </script>
+
+<style>
+  h1 {
+    font-size: 50px;
+    color: royalblue;
+  }
+</style>
