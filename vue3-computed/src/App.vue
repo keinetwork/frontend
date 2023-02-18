@@ -1,28 +1,15 @@
 <template>
-  <!-- Remove & use example component! -->
-  <HelloWorld 
-    :msg="message" 
-    @click="handler" />
-  <HelloWorld msg="Good" />
+  <Fruits />
 </template>
 
 <script>
-import HelloWorld from '~/components/HelloWorld'
+import Fruits from '~/components/Fruits'
 
 export default {
+
   components: {
-    HelloWorld
-  },
-  data() {
-    return {
-      message: 'Hello Vue!'
-    }
-  },
-  methods: {
-    handler() {
-      console.log(this.message)
-      this.message += '!'
-    }
+    Fruits
   }
+
 }
 </script>
