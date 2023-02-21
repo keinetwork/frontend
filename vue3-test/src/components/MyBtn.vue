@@ -3,7 +3,6 @@
     class="btn">
     <slot></slot>
   </div>
-  <h1 v-bind="$attrs"></h1>
 </template>
 
 <script>
@@ -11,7 +10,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped >
   .btn {
     display: inline-block;
     margin: 4px;
