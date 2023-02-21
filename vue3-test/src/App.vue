@@ -1,25 +1,13 @@
 <template>
-  <h1>{{ msg }}</h1>
-  <input 
-    type="text" 
-    :value="msg" 
-    @change="msg= $event.target.value"/><br>
-    <input 
-    type="text" 
-    v-model.trim="msg" />
+  <MyBtn />
 </template>
 
 <script> 
+import MyBtn from '~/components/MyBtn'
+
 export default {
-  data() {
-    return {
-      msg: 'Hello world!'
-    }
-  },
-  watch: {
-    msg() {
-      console.log(this.msg)
-    }
+  components: {
+    MyBtn
   }
 }
 </script>
