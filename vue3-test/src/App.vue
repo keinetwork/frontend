@@ -1,7 +1,7 @@
 <template>
   <div
     class="parent"
-    @click="handlerA">
+    @wheel.passive="handler">
     <div
       class="child"
       @click="handlerB">
@@ -12,11 +12,10 @@
 <script> 
 export default {
   methods: {
-    handlerA() {
-      console.log('A')
-    },
-    handlerB() {
-      console.log('B')
+    handler(event) {
+      for (let i =0; i< 10000; i+=1){
+        console.log(event)
+      }
     }
   }
 }
@@ -29,9 +28,10 @@ export default {
     background-color: royalblue;
     margin: 10px;
     padding: 10px;
+    overflow: auto;
     .child {
       width: 100px;
-      height: 100px;
+      height: 200px;
       background-color: orange;
     }
   }
