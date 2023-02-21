@@ -1,5 +1,7 @@
 <template>
-  <MyBtn @click="log">
+  <MyBtn 
+    @heropy="log" 
+    @change-msg="logMsg">
     Banana
   </MyBtn>
 </template>
@@ -12,8 +14,12 @@ export default {
     MyBtn
   },
   methods: {
-    log() {
+    log(event) {
       console.log('Click!!')
+      console.log(event)
+    },
+    logMsg(msg) {
+      console.log(msg)
     }
   }
 }

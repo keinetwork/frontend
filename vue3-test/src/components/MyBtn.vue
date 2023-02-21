@@ -3,10 +3,28 @@
     class="btn">
     <slot></slot>
   </div>
+  <h1 @dblclick="$emit('heropy', $event)">
+    ABC
+  </h1>
+  <input type="text" v-model="msg" />
 </template>
 
 <script>
 export default {
+  emits: [
+    'heropy',
+    'changeMsg'
+  ],
+  data() {
+    return {
+      msg: ''
+    }
+  },
+  watch: {
+    msg() {
+      this.$emit('changeMsg', this.msg)
+    }
+  }
 }
 </script>
 
