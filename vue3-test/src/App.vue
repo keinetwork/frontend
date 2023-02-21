@@ -1,8 +1,5 @@
 <template>
-  <MyBtn 
-    class="heropy"
-    style="color: red;"
-    title="Hello world!">
+  <MyBtn @click="log">
     Banana
   </MyBtn>
 </template>
@@ -13,6 +10,11 @@ import MyBtn from '~/components/MyBtn'
 export default {
   components: {
     MyBtn
+  },
+  methods: {
+    log() {
+      console.log('Click!!')
+    }
   }
 }
 </script>

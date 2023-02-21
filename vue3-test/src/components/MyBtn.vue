@@ -8,10 +8,6 @@
 
 <script>
 export default {
-  inheritAttrs: false,
-  created() {
-    console.log(this.$attrs)
-  }
 }
 </script>
 
