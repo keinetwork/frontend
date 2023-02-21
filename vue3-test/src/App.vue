@@ -1,18 +1,38 @@
 <template>
-  <a
-    href="https://naver.com"
-    target="_blank"
-    @click.prevent.once="handler">
-    NAVER
-  </a>
+  <div
+    class="parent"
+    @click="handlerA">
+    <div
+      class="child"
+      @click="handlerB">
+    </div>
+  </div>
 </template>
 
 <script> 
 export default {
   methods: {
-    handler() {
-      console.log('ABC!')
+    handlerA() {
+      console.log('A')
+    },
+    handlerB() {
+      console.log('B')
     }
   }
 }
 </script>
+
+<style scoped lang="scss">
+  .parent {
+    width: 200px;
+    height: 100px;
+    background-color: royalblue;
+    margin: 10px;
+    padding: 10px;
+    .child {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+  }
+</style>
