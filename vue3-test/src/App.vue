@@ -1,9 +1,14 @@
 <template>
-  <Parent :msg="message" />
+  <button @click="message= 'Good?'">
+    Click!
+  </button>
+  <h1>App: {{ message }}</h1>
+  <Parent />
 </template>
 
 <script> 
 import Parent from '~/components/Parent'
+import { computed } from 'vue'
 
 export default {
   components: {
@@ -12,6 +17,11 @@ export default {
   data() {
     return {
       message: 'Hello world!'
+    }
+  },
+  provide() {
+    return {
+      msg: computed(() => this.message)
     }
   }
 }
