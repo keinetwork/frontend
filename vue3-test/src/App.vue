@@ -3,7 +3,10 @@
   <input 
     type="text" 
     :value="msg" 
-    @input="msg= $event.target.value"/>
+    @change="msg= $event.target.value"/><br>
+    <input 
+    type="text" 
+    v-model.trim="msg" />
 </template>
 
 <script> 
@@ -11,6 +14,11 @@ export default {
   data() {
     return {
       msg: 'Hello world!'
+    }
+  },
+  watch: {
+    msg() {
+      console.log(this.msg)
     }
   }
 }
