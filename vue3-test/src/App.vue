@@ -2,7 +2,7 @@
   <a
     href="https://naver.com"
     target="_blank"
-    @click="handler">
+    @click.prevent.once="handler">
     NAVER
   </a>
 </template>
