@@ -1,49 +1,35 @@
 <template>
-  <h1 @click="increase">
-    {{ count }}
-  </h1> 
-  <div v-if="count > 4">
-    4보다 큽니다!
-  </div>
-  <ul>
-    <Fruit 
-      v-for="fruit in fruits"
-      :key="fruit"
-      :name="fruit">
-      {{ fruit }}
-    </Fruit>
-  </ul>
+  <button @click="handler">Click me!</button>
+  <h1 v-if="isShow">Hello?!</h1>
+  <h1 v-else-if="count > 3">
+    Count > 3
+  </h1>
+  <h1 v-else>
+    Good~
+  </h1>
+  <template v-if="isShow">
+    <h1>Title</h1>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p> 
+  </template> 
+  <h1 v-show="isShow">
+    Hello?!
+  </h1>
 </template>
 
-<script>
-import Fruit from '~/components/Fruit'
-
+<script> 
 export default {
-  components: {
-    Fruit
-  },
   data() {
     return {
-      count: 0,
-      fruits: ['Apple', 'Banana', 'Cherry']
-    }
+      isShow: false,
+      count: 0
+    };
   },
   methods: {
-    increase() {
-      this.count += 1
+    handler() {
+      this.isShow = !this.isShow;
+      this.count += 1;
     }
-  }
-}
+  },
+};
 </script>
-
-<style lang="scss">
-  h1 {
-    font-size: 50px;
-    color: royalblue;
-  }
-  ul {
-    li {
-      font-size: 40px;
-    }
-  }
-</style>
