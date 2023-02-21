@@ -1,14 +1,14 @@
 <template>
   <input
     type="text"
-    @keydown="handler" />
+    @keydown.ctrl.a="handler" />
 </template>
 
 <script> 
 export default {
   methods: {
-    handler(event) {
-      console.log(event)
+    handler() {
+        console.log('Enter!!')
     }
   }
 }
