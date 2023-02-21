@@ -1,20 +1,18 @@
 <template>
-  <MyBtn>
-    <template #text>
-      <span>Banana</span>
-    </template>
-    <template #icon>
-      <span>(B)</span>
-    </template>
-  </MyBtn>
+  <Parent :msg="message" />
 </template>
 
 <script> 
-import MyBtn from '~/components/MyBtn'
+import Parent from '~/components/Parent'
 
 export default {
   components: {
-    MyBtn
+    Parent
+  },
+  data() {
+    return {
+      message: 'Hello world!'
+    }
   }
 }
 </script>
