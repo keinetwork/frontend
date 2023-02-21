@@ -1,5 +1,10 @@
 <template>
-  <MyBtn >Banana</MyBtn>
+  <MyBtn 
+    class="heropy"
+    style="color: red;"
+    title="Hello world!">
+    Banana
+  </MyBtn>
 </template>
 
 <script> 
