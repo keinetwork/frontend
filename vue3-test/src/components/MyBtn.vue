@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
 export default {
     inheritAttrs: false,
     props: {
@@ -17,13 +18,17 @@ export default {
         }
     },
     emits: ['hello'],
-    mounted() {
-        console.log(this.color)
-        console.log(this.$attrs)
-    },
-    methods: {
-        hello() {
-            this.$emit('hello')
+    setup(props, context) {
+        function hello() {
+            context.emit('hello')
+        }
+        onMounted(()=>{
+            console.log(props.color)
+            console.log(context.attrs)
+        })
+
+        return {
+            hello
         }
     }
 }
