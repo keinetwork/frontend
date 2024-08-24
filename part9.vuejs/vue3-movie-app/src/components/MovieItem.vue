@@ -1,6 +1,6 @@
 <template>
   <RouterLink 
-  :to="`/movie/${movie.imdbID}`"
+    :to="`/movie/${movie.imdbID}`"
     :style="{ backgroundImage: `url(${movie.Poster})` }"
     class="movie">
     <Loader 
