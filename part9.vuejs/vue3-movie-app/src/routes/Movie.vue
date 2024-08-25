@@ -164,6 +164,7 @@ export default {
     display: flex;
     color: $gray-600;
     .poster {
+        flex-shrink: 0;
         width: 500px;
         height: 500px * 3 / 2;
         margin-right: 70px;
@@ -175,7 +176,6 @@ export default {
     }
     .specs {
         flex-grow: 1;
-        width: 500px;
         .title {
             color: $black;
             font-family: 'Oswald', sans-serif;
