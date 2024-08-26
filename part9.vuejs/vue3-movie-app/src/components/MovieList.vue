@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import MovieItem from '~/components/MovieItem'
 import Loader from '~/components/Loader'
 
@@ -26,16 +27,12 @@ export default {
       MovieItem,
       Loader
   },
-  computed: {
-    movies() { 
-      return this.$store.state.movie.movies
-    },
-    message() {
-      return this.$store.state.movie.message
-    },
-    loading() {
-      return this.$store.state.movie.loading
-    }
+  computed: {    
+    ...mapState('movie', [
+      'movies',
+      'message',
+      'loading'
+    ])
   }
 }
 </script>
