@@ -22,7 +22,7 @@ class Button extends React.Component {
 
     // console.log(classNames(styles["button"], styles["loading"]));
 
-    const { loading } = this.state;
+    const { loading } = this.state; 
 
     return (
       <button
