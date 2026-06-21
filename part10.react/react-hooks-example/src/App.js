@@ -22,11 +22,11 @@ function App({ hasMounted }) {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {/* <Example1 />
+        <Example1 />
         <Example2 />
         <Example3 />
-        <Example4 /> */}
-        {/* <Example5 /> */}
+        <Example4 />
+        <Example5 />
         <Example8 />
         {width}
       </header>
